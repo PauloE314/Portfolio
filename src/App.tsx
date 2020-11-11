@@ -5,15 +5,14 @@ import LandingPage from "./pages/LandingPage";
 import ProjectsPage from "./pages/ProjectsPage";
 import ResumePage from "./pages/ResumePage";
 
-import { Container } from "./styles/AppStyle";
+import { GlobalStyles } from "./styles/AppStyle";
 
 export default function App() {
   return (
-    <Container>
+    <>
+      <GlobalStyles />
       <LandingPage />
       <ResumePage />
-      <ProjectsPage />
-      <ContactPage />
-    </Container>
+    </>
   );
 }

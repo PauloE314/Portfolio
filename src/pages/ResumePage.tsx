@@ -1,7 +1,7 @@
 import React from "react";
 
-import {} from "../styles/ResumeStyle";
+import { Container } from "../styles/ResumeStyle";
 
 export default function ResumePage() {
-  return <div></div>;
+  return <Container></Container>;
 }
