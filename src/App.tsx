@@ -1,11 +1,19 @@
-import React from 'react';
+import React from "react";
 
-function App() {
+import ContactPage from "./pages/ContactPage";
+import LandingPage from "./pages/LandingPage";
+import ProjectsPage from "./pages/ProjectsPage";
+import ResumePage from "./pages/ResumePage";
+
+import { Container } from "./styles/AppStyle";
+
+export default function App() {
   return (
-    <div className="App">
-      <h1>Hello World</h1>
-    </div>
+    <Container>
+      <LandingPage />
+      <ResumePage />
+      <ProjectsPage />
+      <ContactPage />
+    </Container>
   );
 }
-
-export default App;
