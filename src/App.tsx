@@ -1,18 +1,13 @@
 import React from "react";
 
-import ContactPage from "./pages/ContactPage";
-import LandingPage from "./pages/LandingPage";
-import ProjectsPage from "./pages/ProjectsPage";
-import ResumePage from "./pages/ResumePage";
+import LandingPage from "./app/LandingPage";
 
-import { GlobalStyles } from "./styles/AppStyle";
+import "./styles/BaseStyle.css";
 
 export default function App() {
   return (
     <>
-      <GlobalStyles />
       <LandingPage />
-      <ResumePage />
     </>
   );
 }
