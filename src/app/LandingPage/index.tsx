@@ -1,12 +1,10 @@
 import React, { useEffect, useState } from "react";
-import { AiOutlineMenu } from "react-icons/ai";
 
 import "./style.css";
 
 import LandingIcon from "../../assets/Landing icon.svg";
 import LandingIconMobile from "../../assets/Landing icon (mobile).svg";
 
-import Logo from "../../assets/Logo.svg";
 import useScreen from "../../utils/useScreen";
 import Header from "./Header";
 
@@ -29,22 +27,34 @@ export default function LandingPage(props: IProps) {
   useEffect(handleResize, [screen.width]);
 
   return (
-    <div id="landing" className="page">
+    <section id="landing" className="page">
       {/* Header */}
 
       <Header isMobile={isMobile}>
         <ul id="header-list">
           <li>
-            <a href="#skills"> Habilidades</a>{" "}
+            <a className="neon" href="#skills">
+              {" "}
+              Habilidades
+            </a>{" "}
           </li>
           <li>
-            <a href="#projects"> Projetos</a>{" "}
+            <a className="neon" href="#projects">
+              {" "}
+              Projetos
+            </a>{" "}
           </li>
           <li>
-            <a href="#resume"> Resumo</a>{" "}
+            <a className="neon" href="#resume">
+              {" "}
+              Resumo
+            </a>{" "}
           </li>
           <li>
-            <a href="#contact"> Contato</a>{" "}
+            <a className="neon" href="#contact">
+              {" "}
+              Contato
+            </a>{" "}
           </li>
         </ul>
       </Header>
@@ -67,6 +77,6 @@ export default function LandingPage(props: IProps) {
           <img src={landingImage} alt="" />
         </div>
       </div>
-    </div>
+    </section>
   );
 }

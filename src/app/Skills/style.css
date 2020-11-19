@@ -1,0 +1,132 @@
+/* Text */
+#skills .text-container {
+  margin-top: 5rem;
+}
+
+/* Big skill list */
+#skills #big-skills {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  margin-top: 3rem;
+}
+#skills #big-skills li {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: 4rem;
+  border-color: transparent !important;
+  padding: 1.5rem 3rem;
+  cursor: pointer;
+}
+#skills #big-skills li:hover {
+  border-color: white !important;
+}
+#skills #big-skills li span {
+  font-size: 0.8rem;
+  color: inherit;
+}
+
+/* Carrossel */
+#skills .carrossel {
+  background-color: #1f1f23;
+  padding: 3.5rem 4rem 2rem 4rem;
+  border-radius: 0.5rem;
+}
+#skills .carrossel .content {
+  display: flex;
+}
+#skills .carrossel .identify-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  width: auto;
+}
+#skills .carrossel img {
+  width: 10rem;
+}
+#skills .carrossel .label {
+  display: block;
+  margin-top: 2rem;
+  text-align: center;
+  width: 7rem;
+  word-wrap: wrap;
+  font-weight: 700;
+  color: #cdcdcd;
+  font-size: 1.3rem;
+}
+#skills .carrossel .data-container {
+  display: flex;
+  position: relative;
+  top: 1rem;
+  flex-direction: column;
+  width: 100%;
+  margin-left: 3rem;
+}
+#skills .carrossel .data-container .tag {
+  background-color: rgba(196, 196, 196, 0.25);
+  align-self: flex-end;
+  padding: 0.5rem 1.8rem;
+  font-size: 0.9rem;
+  border-radius: 0.3rem;
+  margin-top: 2rem;
+}
+#skills .carrossel .data-container ul li {
+  margin-bottom: 1rem;
+  color: #888888;
+}
+#skills .carrossel .data-container ul span {
+  color: #cdcdcd;
+  font-size: 0.8rem;
+}
+#skills .carrossel .data-container ul .line {
+  display: flex;
+  align-items: center;
+}
+#skills .carrossel .data-container ul .line .bg-line {
+  background-color: #888888;
+  width: 100%;
+  height: 2px;
+}
+#skills .carrossel .data-container ul .line .grow {
+  height: 4px;
+}
+#skills .carrossel .data-container ul .line .ball {
+  font-size: 0.9rem;
+}
+#skills .carrossel .control {
+  display: flex;
+  color: #888888;
+  font-size: 0.5rem;
+
+  justify-content: center;
+  margin-top: 3rem;
+}
+#skills .carrossel .control li {
+  cursor: pointer;
+  margin-left: 1.8rem;
+}
+#skills .carrossel .control li svg {
+  transition: color 0.5s, box-shadow 0.5s, text-shadow 0.5s;
+}
+#skills .carrossel .control li:hover svg {
+  color: white;
+  box-shadow: 0 0 1rem rgba(255, 255, 255, 0.9),
+    inset 0 0 1rem rgba(255, 255, 255, 0.4);
+  border-color: white;
+  border-radius: 50%;
+  text-shadow: 0 0 0.5rem rgba(255, 255, 255, 0.5);
+}
+#skills .carrossel .control li:first-child {
+  margin-left: 0rem;
+}
+#skills .carrossel .control li.active svg {
+  color: white;
+  box-shadow: 0 0 1rem rgba(255, 255, 255, 0.9),
+    inset 0 0 1rem rgba(255, 255, 255, 0.4);
+  border-color: white;
+  border-radius: 50%;
+  text-shadow: 0 0 0.5rem rgba(255, 255, 255, 0.5);
+}
