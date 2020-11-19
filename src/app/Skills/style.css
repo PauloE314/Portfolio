@@ -1,16 +1,15 @@
 /* Text */
-#skills .text-container {
-  margin-top: 5rem;
+#skills .main .text-container {
+  margin: 6rem 0rem 5rem 0rem;
 }
 
 /* Big skill list */
-#skills #big-skills {
+#skills .main #big-skills {
   display: flex;
   justify-content: space-evenly;
   align-items: center;
-  margin-top: 3rem;
 }
-#skills #big-skills li {
+#skills .main #big-skills li {
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -20,22 +19,50 @@
   padding: 1.5rem 3rem;
   cursor: pointer;
 }
-#skills #big-skills li:hover {
+#skills .main #big-skills li:hover {
   border-color: white !important;
 }
-#skills #big-skills li span {
+#skills .main #big-skills li span {
   font-size: 0.8rem;
   color: inherit;
+}
+
+/* Background image */
+#skills #carousel-container {
+  padding: 0rem 2rem;
+  position: relative;
+}
+#skills #carousel-container #binary {
+  position: absolute;
+  top: 2rem;
+  right: -10rem;
 }
 
 /* Carrossel */
 #skills .carrossel {
   background-color: #1f1f23;
-  padding: 3.5rem 4rem 2rem 4rem;
+  position: relative;
+  padding: 2.5rem 2rem 2rem 2rem;
   border-radius: 0.5rem;
 }
-#skills .carrossel .content {
+#skills .carrossel .content-container {
   display: flex;
+  position: relative;
+  overflow-x: hidden;
+  overflow-y: hidden;
+  scroll-behavior: smooth;
+  scroll-snap-type: x mandatory;
+}
+#skills .carrossel .content-container .content {
+  z-index: 1;
+
+  display: flex;
+  flex: 0 0 100%;
+  scroll-snap-align: center;
+  padding: 0rem 3rem 0rem 3rem;
+}
+#skills .carrossel .content-container .content.active {
+  z-index: 2;
 }
 #skills .carrossel .identify-container {
   display: flex;
@@ -57,43 +84,47 @@
   color: #cdcdcd;
   font-size: 1.3rem;
 }
-#skills .carrossel .data-container {
+#skills .carrossel .content .data-container {
   display: flex;
   position: relative;
+  justify-content: space-evenly;
   top: 1rem;
   flex-direction: column;
   width: 100%;
   margin-left: 3rem;
 }
-#skills .carrossel .data-container .tag {
+#skills .carrossel .content .data-container .tag {
   background-color: rgba(196, 196, 196, 0.25);
   align-self: flex-end;
   padding: 0.5rem 1.8rem;
   font-size: 0.9rem;
   border-radius: 0.3rem;
   margin-top: 2rem;
+  margin-bottom: 2rem;
 }
-#skills .carrossel .data-container ul li {
+
+#skills .carrossel .content .data-container ul li {
   margin-bottom: 1rem;
   color: #888888;
 }
-#skills .carrossel .data-container ul span {
+#skills .carrossel .content .data-container ul span {
   color: #cdcdcd;
   font-size: 0.8rem;
 }
-#skills .carrossel .data-container ul .line {
+#skills .carrossel .content .data-container ul .line {
   display: flex;
   align-items: center;
 }
-#skills .carrossel .data-container ul .line .bg-line {
+#skills .carrossel .content .data-container ul .line .bg-line {
   background-color: #888888;
   width: 100%;
   height: 2px;
 }
-#skills .carrossel .data-container ul .line .grow {
+#skills .carrossel .content .data-container ul .line .grow {
   height: 4px;
+  transition: width 1s;
 }
-#skills .carrossel .data-container ul .line .ball {
+#skills .carrossel .content .data-container ul .line .ball {
   font-size: 0.9rem;
 }
 #skills .carrossel .control {
@@ -102,7 +133,7 @@
   font-size: 0.5rem;
 
   justify-content: center;
-  margin-top: 3rem;
+  margin-top: 0.5rem;
 }
 #skills .carrossel .control li {
   cursor: pointer;
@@ -129,4 +160,101 @@
   border-color: white;
   border-radius: 50%;
   text-shadow: 0 0 0.5rem rgba(255, 255, 255, 0.5);
+}
+
+/* Medium */
+@media (max-width: 1100px) {
+  #skills .main #big-skills li {
+    font-size: 4.5rem;
+    color: #cdcdcd !important;
+    padding: 1.5rem 3rem;
+    cursor: pointer;
+    text-shadow: 0 0 1rem rgb(219, 219, 219, 0.7);
+  }
+  #skills .main #big-skills li span {
+    font-size: 1rem;
+    margin-top: 0.5rem;
+  }
+}
+
+@media (max-width: 700px) {
+  /* Text mobile */
+  #skills .main .text-container {
+    margin: 5rem 0rem 2rem 0rem;
+  }
+
+  /* Big skills mobile */
+  #skills .main #big-skills {
+    justify-content: center;
+    margin-bottom: 2.5rem;
+  }
+  #skills .main #big-skills li {
+    font-size: 4.5rem;
+    color: #cdcdcd !important;
+    padding: 1.5rem 3rem;
+    cursor: pointer;
+    text-shadow: 0 0 1rem rgb(219, 219, 219, 0.7);
+  }
+  #skills .main #big-skills li span {
+    font-size: 1rem;
+    margin-top: 0.5rem;
+  }
+
+  /* Background image mobile */
+  #skills #carousel-container #binary {
+    position: absolute;
+    z-index: -1;
+    top: -8rem;
+    right: -8rem;
+  }
+
+  /* Carousel mobile */
+  #skills #carousel-container {
+    padding: 0;
+  }
+  #skills .carrossel {
+    padding: 2rem 1rem 0rem 1rem;
+  }
+  #skills .carrossel .content {
+    flex-direction: column;
+    padding: 0;
+  }
+  #skills .carrossel .content .identify-container {
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+  }
+  #skills .carrossel .content .identify-container .label {
+    margin: 0;
+    font-size: 1.7rem;
+    text-align: end;
+    line-height: 2.3rem;
+    width: 8rem;
+  }
+  #skills .carrossel .content .identify-container img {
+    width: 12rem;
+  }
+  #skills .carrossel .content .data-container {
+    margin: 1rem 0rem 0rem 0rem;
+    height: 100%;
+    justify-content: space-between;
+  }
+  #skills .carrossel .content .data-container ul {
+    justify-content: center;
+  }
+  #skills .carrossel .content .data-container ul span {
+    font-size: 1rem;
+  }
+  #skills .carrossel .content .data-container .tag {
+    align-self: flex-start;
+    padding: 0.8rem 1.5rem;
+    font-size: 1.2rem;
+  }
+  #skills .carrossel .control {
+    position: relative;
+    top: -2.5rem;
+    font-size: 0.75rem;
+    justify-content: flex-end;
+    padding-right: 2rem;
+  }
 }

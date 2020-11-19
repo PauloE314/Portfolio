@@ -13,13 +13,17 @@ const Header: FunctionComponent<IProps> = ({ isMobile, children }) => {
 
   function enableHeader() {
     setShowNavbar(true);
+    document.body.style.overflowY = "hidden";
   }
 
   function disableHeader() {
     const bg = document.getElementById("nav-background");
     if (bg) bg.style.opacity = "0";
 
-    setTimeout(() => setShowNavbar(false), 500);
+    setTimeout(() => {
+      setShowNavbar(false);
+      document.body.style.overflowY = "auto";
+    }, 500);
   }
 
   function handleScreenClick(e: React.MouseEvent) {

@@ -1,16 +1,23 @@
 import React from "react";
 import { FaGamepad } from "react-icons/fa";
 import { GoBrowser, GoGear } from "react-icons/go";
-import Carrossel from "./Carrossel";
+
+import Carousel from "./Carousel";
+
+import BinaryImage from "../../assets/Binary.svg";
 
 import "./style.css";
+import { skills } from "../../settings";
 
 export default function Skills() {
   return (
     <section id="skills" className="page">
       <h2 className="title">Habilidades</h2>
       <div className="main">
-        <Carrossel list={[]} />
+        <div id="carousel-container">
+          <img id="binary" src={BinaryImage} alt="" />
+          <Carousel list={skills} />
+        </div>
 
         <div className="text-container">
           <p className="text">
