@@ -206,6 +206,7 @@
     z-index: -1;
     top: -8rem;
     right: -8rem;
+    object-fit: contain;
   }
 
   /* Carousel mobile */
