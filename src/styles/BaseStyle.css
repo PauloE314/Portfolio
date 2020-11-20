@@ -33,12 +33,18 @@ body {
 
 /* Containers */
 .page {
+  position: relative;
   min-height: 100vh;
   width: 100vw;
   padding: 3rem 15rem 3rem 11rem;
   margin-bottom: 6rem;
 
   background-image: url(../assets/Stars.svg);
+  z-index: 1;
+}
+.page .bg-image {
+  position: absolute;
+  z-index: -1;
 }
 
 /* Texts */
@@ -50,12 +56,12 @@ body {
 .text {
   font-family: Comfortaa, sans-serif;
   font-weight: 300;
-  text-indent: 1rem;
+  text-indent: 3rem;
   text-align: justify;
-  font-size: 0.9rem;
+  font-size: 0.8rem;
   word-wrap: wrap;
   line-height: 1.6rem;
-  color: #cdcdcd;
+  color: #aaaaaa;
   margin-top: 1rem;
 }
 .text strong {
@@ -127,6 +133,10 @@ body {
   .page {
     padding: 2rem 3.5rem 2rem 2.5rem;
   }
+  .text {
+    font-size: 1.1rem;
+    line-height: 2rem;
+  }
 }
 
 /* Mobile */
@@ -136,13 +146,13 @@ body {
   }
 
   .page {
-    padding: 1rem 1.5rem;
+    padding: 1rem 2.1rem;
   }
   .title {
     font-size: 3rem;
   }
   .text {
-    font-size: 1rem;
+    font-size: 1.2rem;
     line-height: 1.95rem;
   }
 }

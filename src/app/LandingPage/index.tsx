@@ -5,18 +5,18 @@ import "./style.css";
 import LandingIcon from "../../assets/Landing icon.svg";
 import LandingIconMobile from "../../assets/Landing icon (mobile).svg";
 
-import useScreen from "../../utils/useScreen";
 import Header from "./Header";
 
 interface IProps {
-  isMobile?: boolean;
+  screen: {
+    width: number;
+    height: number;
+  };
 }
 
-export default function LandingPage(props: IProps) {
+export default function LandingPage({ screen }: IProps) {
   const [landingImage, setLandingImage] = useState(LandingIcon);
   const [isMobile, setMobile] = useState(false);
-
-  const screen = useScreen();
 
   // Handles screen resize
   function handleResize() {

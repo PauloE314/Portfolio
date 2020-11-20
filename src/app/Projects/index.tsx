@@ -4,7 +4,7 @@ import "./style.css";
 
 export default function Projects() {
   return (
-    <div className="page">
+    <section className="page">
       <h2 className="title">Principais projetos</h2>
       <div className="main">
         <p className="text">
@@ -18,6 +18,6 @@ export default function Projects() {
           <li>League of legends</li>
         </ul>
       </div>
-    </div>
+    </section>
   );
 }
