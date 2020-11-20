@@ -1,10 +1,12 @@
 import React from "react";
 
 import "./style.css";
+import ProjectCard from "./ProjectCard";
+import { projects } from "../../settings";
 
 export default function Projects() {
   return (
-    <section className="page">
+    <section id="projects" className="page">
       <h2 className="title">Principais projetos</h2>
       <div className="main">
         <p className="text">
@@ -13,9 +15,15 @@ export default function Projects() {
         </p>
 
         <ul id="project-list">
-          <li>Nonny</li>
-          <li>Google</li>
-          <li>League of legends</li>
+          {[...projects].map(({ image, name, tag, year }, id) => (
+            <ProjectCard
+              key={id}
+              image={image}
+              name={name}
+              tag={tag}
+              year={year}
+            />
+          ))}
         </ul>
       </div>
     </section>

@@ -49,4 +49,68 @@ export const skills = [
   },
 ];
 
-export const projects = [];
+export const projects = [
+  {
+    name: "Nonny",
+    year: 2020,
+    tag: "Full stack",
+    image:
+      "https://www.talkwalker.com/images/2020/blog-headers/image-analysis.png",
+  },
+  {
+    name: "Google",
+    year: 2020,
+    tag: "Backend",
+    image:
+      "https://media.sproutsocial.com/uploads/2017/02/10x-featured-social-media-image-size.png",
+  },
+  {
+    name: "League of Legends",
+    year: 2020,
+    tag: "Database",
+    image:
+      "https://www.talkwalker.com/images/2020/blog-headers/image-analysis.png",
+  },
+  {
+    name: "Nonny",
+    year: 2020,
+    tag: "Full stack",
+    image:
+      "https://www.talkwalker.com/images/2020/blog-headers/image-analysis.png",
+  },
+  {
+    name: "Google",
+    year: 2020,
+    tag: "Backend",
+    image:
+      "https://media.sproutsocial.com/uploads/2017/02/10x-featured-social-media-image-size.png",
+  },
+  {
+    name: "League of Legends",
+    year: 2020,
+    tag: "Database",
+    image:
+      "https://www.talkwalker.com/images/2020/blog-headers/image-analysis.png",
+  },
+  {
+    name: "Nonny",
+    year: 2020,
+    tag: "Full stack",
+    image:
+      "https://www.talkwalker.com/images/2020/blog-headers/image-analysis.png",
+  },
+  {
+    name: "Google",
+    year: 2020,
+    tag: "Backend",
+    image:
+      "https://media.sproutsocial.com/uploads/2017/02/10x-featured-social-media-image-size.png",
+  },
+  {
+    name: "League of Legends",
+    year: 2020,
+    tag: "Database",
+    image:
+      "https://www.talkwalker.com/images/2020/blog-headers/image-analysis.png",
+  },
+];

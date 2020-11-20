@@ -1,0 +1,114 @@
+/* Card list */
+#projects #project-list {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  padding: 1rem;
+  flex-basis: 100%;
+}
+/* Card */
+#projects #project-list .card .card-data {
+  display: flex;
+  flex-direction: column;
+  background-color: #1f1f23;
+  border-radius: 0.3rem;
+}
+#projects #project-list .card {
+  display: flex;
+  justify-content: center;
+  flex-grow: 0;
+  margin: 1.1rem;
+}
+/* Card -> image */
+#projects #project-list .card .image-container {
+  position: relative;
+}
+
+#projects #project-list .card .image-container .button-container {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: calc(100% - 0.5rem);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: rgba(0, 0, 0, 0.8);
+  opacity: 0;
+  border-radius: 0.3rem;
+  cursor: pointer;
+  transition: opacity 0.5s;
+
+  z-index: 2;
+}
+#projects #project-list .card .image-container .button-container button {
+  background-color: #2f314e;
+  color: white;
+  cursor: pointer;
+  font-size: 1rem;
+  padding: 1rem;
+  border-radius: 0.3rem;
+}
+
+#projects #project-list .card .image-container img {
+  width: 18rem;
+  height: 12rem;
+
+  object-fit: cover;
+  border-radius: 0.3rem;
+  transition: filter 0.3s;
+}
+#projects #project-list .card .image-container:hover .button-container {
+  opacity: 1;
+}
+/* Card -> body */
+#projects #project-list .card .card-body {
+  margin-top: 1rem;
+  display: flex;
+  justify-content: space-between;
+  padding: 1rem;
+}
+#projects #project-list .card .card-body .data-container h3 {
+  margin-bottom: 0.5rem;
+  max-width: 6rem;
+}
+#projects #project-list .card .card-body .data-container small {
+  color: rgb(255, 255, 255, 0.4);
+  font-weight: 700;
+}
+/* Card -> tag */
+#projects #project-list .card .tag-container {
+  display: flex;
+  align-items: center;
+}
+#projects #project-list .card .tag-container .tag {
+  font-weight: 300;
+  font-size: 0.9rem;
+  color: rgba(255, 255, 255, 0.5);
+  background-color: #232441;
+  border-radius: 0.2rem;
+  padding: 0.6rem 1.5rem !important;
+}
+
+@media (max-width: 1100px) {
+  /* Card -> image (medium) */
+  #projects #project-list .card img {
+    width: 20rem;
+    height: 12rem;
+  }
+}
+
+@media (max-width: 700px) {
+  /* Card -> image (medium) */
+  #projects #project-list {
+    display: block;
+    padding: 1rem;
+  }
+  #projects #project-list .card {
+    margin-bottom: 3rem;
+  }
+  #projects #project-list .card img {
+    width: 100%;
+    height: auto;
+  }
+}
