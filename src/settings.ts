@@ -56,6 +56,10 @@ export const projects = [
     tag: "Full stack",
     image:
       "https://www.talkwalker.com/images/2020/blog-headers/image-analysis.png",
+    links: {
+      github: "https://github.com/PauloE314/Nonny",
+      production: undefined,
+    },
   },
   {
     name: "Google",
@@ -63,6 +67,10 @@ export const projects = [
     tag: "Backend",
     image:
       "https://media.sproutsocial.com/uploads/2017/02/10x-featured-social-media-image-size.png",
+    links: {
+      github: "https://github.com/PauloE314/Py-Snake",
+      production: "https://google.com",
+    },
   },
   {
     name: "League of Legends",
@@ -70,47 +78,9 @@ export const projects = [
     tag: "Database",
     image:
       "https://www.talkwalker.com/images/2020/blog-headers/image-analysis.png",
-  },
-  {
-    name: "Nonny",
-    year: 2020,
-    tag: "Full stack",
-    image:
-      "https://www.talkwalker.com/images/2020/blog-headers/image-analysis.png",
-  },
-  {
-    name: "Google",
-    year: 2020,
-    tag: "Backend",
-    image:
-      "https://media.sproutsocial.com/uploads/2017/02/10x-featured-social-media-image-size.png",
-  },
-  {
-    name: "League of Legends",
-    year: 2020,
-    tag: "Database",
-    image:
-      "https://www.talkwalker.com/images/2020/blog-headers/image-analysis.png",
-  },
-  {
-    name: "Nonny",
-    year: 2020,
-    tag: "Full stack",
-    image:
-      "https://www.talkwalker.com/images/2020/blog-headers/image-analysis.png",
-  },
-  {
-    name: "Google",
-    year: 2020,
-    tag: "Backend",
-    image:
-      "https://media.sproutsocial.com/uploads/2017/02/10x-featured-social-media-image-size.png",
-  },
-  {
-    name: "League of Legends",
-    year: 2020,
-    tag: "Database",
-    image:
-      "https://www.talkwalker.com/images/2020/blog-headers/image-analysis.png",
+    links: {
+      github: "https://github.com/PauloE314/Pong-Lua",
+      production: "https://br.leagueoflegends.com/pt-br/",
+    },
   },
 ];

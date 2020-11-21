@@ -13,9 +13,7 @@ export default function Contact() {
     <section id="contact" className="page">
       <img id="pi" src={PI} className="bg-image" alt="" />
       <img id="r" src={R} className="bg-image" alt="" />
-      <h2 className="title">
-        Entre em contato comigo :<span>D</span>
-      </h2>
+      <h2 className="title">Entre em contato comigo :D</h2>
       <div className="main">
         <img id="notebook" src={Notebook} alt="" />
         <div id="contact-container">

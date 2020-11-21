@@ -20,13 +20,8 @@
 
 /* Title */
 #contact h2 {
-  font-size: 3.5rem;
-  margin-bottom: 6rem;
-}
-#contact h2 span {
-  position: relative;
-  top: 0.4rem;
-  left: 0.5rem;
+  margin-bottom: 3rem;
+  text-align: right;
 }
 
 /* Main content */
@@ -50,7 +45,6 @@
   margin-bottom: 1.5rem;
   margin-top: 0;
   text-indent: 1.5rem;
-  font-size: 0.8rem;
 }
 #contact .main #contact-container ul {
   display: flex;
@@ -94,6 +88,11 @@
   /* Screen */
   #contact {
     padding: 3rem;
+  }
+
+  /* Title */
+  #contact h2 {
+    font-size: 2.8rem;
   }
 
   /* BG images */
