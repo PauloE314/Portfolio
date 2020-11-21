@@ -1,30 +1,9 @@
 /* Text */
+#skills {
+  margin-bottom: 9rem;
+}
 #skills .main .text-container {
   margin: 6rem 0rem 5rem 0rem;
-}
-
-/* Big skill list */
-#skills .main #big-skills {
-  display: flex;
-  justify-content: space-evenly;
-  align-items: center;
-}
-#skills .main #big-skills li {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: 4rem;
-  border-color: transparent !important;
-  padding: 1.5rem 3rem;
-  cursor: pointer;
-}
-#skills .main #big-skills li:hover {
-  border-color: white !important;
-}
-#skills .main #big-skills li span {
-  font-size: 0.8rem;
-  color: inherit;
 }
 
 /* Background image */
@@ -192,7 +171,6 @@
     font-size: 4.5rem;
     color: #cdcdcd !important;
     padding: 1.5rem 3rem;
-    cursor: pointer;
     text-shadow: 0 0 1rem rgb(219, 219, 219, 0.7);
   }
   #skills .main #big-skills li span {

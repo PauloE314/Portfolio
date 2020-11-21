@@ -4,7 +4,7 @@ import { GoBrowser, GoGear } from "react-icons/go";
 
 import Carousel from "./Carousel";
 
-import BinaryImage from "../../assets/Binary.svg";
+import BinaryImage from "../../assets/Skills/Binary.svg";
 
 import "./style.css";
 import { skills } from "../../settings";
@@ -35,18 +35,18 @@ export default function Skills() {
           </p>
         </div>
 
-        <ul id="big-skills">
-          <li className="neon">
+        <ul className="interest-list">
+          <li className="interest">
             <FaGamepad />
             <span>Games</span>
           </li>
-          <li className="neon">
+          <li className="interest">
             <GoGear />
             <span>Hardware</span>
           </li>
-          <li className="neon">
+          <li className="interest">
             <GoBrowser />
-            <span>WEB</span>
+            <span>Web</span>
           </li>
         </ul>
       </div>

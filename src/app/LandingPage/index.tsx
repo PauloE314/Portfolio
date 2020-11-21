@@ -2,8 +2,8 @@ import React, { useEffect, useState } from "react";
 
 import "./style.css";
 
-import LandingIcon from "../../assets/Landing icon.svg";
-import LandingIconMobile from "../../assets/Landing icon (mobile).svg";
+import LandingIcon from "../../assets/Landing/Landing icon.svg";
+import LandingIconMobile from "../../assets/Landing/Landing icon (mobile).svg";
 
 import Header from "./Header";
 

@@ -31,6 +31,23 @@ body {
   overflow-x: hidden;
 }
 
+/* Global styles */
+#screen {
+  display: flex;
+}
+#screen #screen-content {
+  flex: 1;
+}
+#screen aside {
+  position: fixed;
+  top: 0;
+  height: 100%;
+  z-index: 30;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
 /* Containers */
 .page {
   position: relative;
@@ -58,7 +75,7 @@ body {
   font-weight: 300;
   text-indent: 3rem;
   text-align: justify !important;
-  font-size: 0.8rem;
+  font-size: 0.9rem;
   word-wrap: wrap;
   line-height: 1.6rem;
   color: #aaaaaa;
@@ -72,7 +89,10 @@ body {
 }
 
 /* Effects */
-.neon {
+
+.neon,
+ul.interest-list .interest {
+  cursor: pointer;
   border: 2px solid !important;
   padding: 3rem;
   color: rgba(255, 255, 255, 0.25);
@@ -81,7 +101,8 @@ body {
   transition: border 0.3s, box-shadow 0.3s, color 0.3s, text-shadow 0.3s;
   border-radius: 1rem;
 }
-.neon:hover {
+.neon:hover,
+ul.interest-list .interest:hover {
   box-shadow: inset 0 0 1rem rgba(255, 255, 255, 0.25),
     0 0 1rem rgba(255, 255, 255, 0.25) !important;
   border-color: white !important;
@@ -101,6 +122,30 @@ body {
   animation: FilterAppear 0.3s linear;
 
   transition: opacity 0.5s;
+}
+
+/* Interest list */
+ul.interest-list {
+  display: flex;
+  margin-top: 5rem;
+  justify-content: space-evenly;
+}
+ul.interest-list .interest {
+  padding: 2.1rem 2.5rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  border-radius: 1rem;
+  background-color: #1f1f23;
+  font-size: 3rem;
+  border: 2px solid transparent !important;
+  border-color: transparent !important;
+}
+ul.interest-list .interest span {
+  font-size: 0.8rem;
+  color: inherit;
+  margin-top: 0.5rem;
 }
 
 @keyframes FilterAppear {
@@ -131,11 +176,22 @@ body {
   }
 
   .page {
-    padding: 2rem 3.5rem 2rem 2.5rem;
+    padding: 2rem 2.5rem 2rem 4.5rem;
   }
   .text {
     font-size: 1.1rem;
     line-height: 2rem;
+  }
+
+  /* Interest list */
+  ul.interest-list .interest {
+    font-size: 4.5rem;
+    color: #cdcdcd !important;
+    padding: 1.5rem 3rem;
+  }
+  ul.interest-list .interest span {
+    font-size: 1rem;
+    margin-top: 0.5rem;
   }
 }
 
@@ -155,5 +211,18 @@ body {
   .text {
     font-size: 1.2rem;
     line-height: 1.95rem;
+  }
+  /* List */
+  ul.interest-list {
+    margin-top: 1rem;
+    justify-content: space-between;
+  }
+  ul.interest-list .interest {
+    padding: 1.5rem 2rem;
+    background-color: transparent;
+    font-size: 3.5rem;
+  }
+  ul.interest-list .interest span {
+    display: none;
   }
 }

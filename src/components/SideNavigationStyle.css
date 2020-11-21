@@ -1,0 +1,23 @@
+#side-navigation {
+  position: relative;
+  left: 0;
+  color: white;
+  transition: opacity 0.5s, left 0.5s;
+}
+#side-navigation li {
+  margin: 1.9rem 1rem;
+  transition: color 0.5s;
+  font-size: 0.8rem;
+}
+#side-navigation li a {
+  color: rgba(255, 255, 255, 0.3);
+}
+#side-navigation li a.active {
+  color: white;
+}
+
+@media (max-width: 700px) {
+  #side-navigation {
+    display: none;
+  }
+}

@@ -2,7 +2,7 @@ import React, { FunctionComponent, useState } from "react";
 import { AiOutlineMenu } from "react-icons/ai";
 import { AiOutlineClose } from "react-icons/ai";
 
-import Logo from "../../assets/Logo.svg";
+import Logo from "../../assets/Landing/Logo.svg";
 
 interface IProps {
   isMobile: boolean;

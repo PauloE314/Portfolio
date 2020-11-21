@@ -1,11 +1,10 @@
 import React from "react";
+import { FaCalculator, FaRobot } from "react-icons/fa";
+import { GoTelescope } from "react-icons/go";
 
 import "./style.css";
 import FullCat from "../../assets/Resume/Full cat.svg";
-import MobileCat from "../../assets/Landing icon (mobile).svg";
-import Robot from "../../assets/Resume/Robot.svg";
-import Math from "../../assets/Resume/Math.svg";
-import Telescope from "../../assets/Resume/Telescope.svg";
+import MobileCat from "../../assets/Landing/Landing icon (mobile).svg";
 import Game from "../../assets/Resume/Game.svg";
 import X from "../../assets/Resume/X.svg";
 
@@ -50,15 +49,15 @@ export default function Resume() {
             quais trabalho a cerca de 2 anos.
           </p>
         </div>
-        <ul>
-          <li>
-            <img src={Telescope} alt="Telescópio" />
+        <ul className="interest-list">
+          <li className="interest">
+            <FaCalculator />
           </li>
-          <li>
-            <img src={Math} alt="Matemática" />
+          <li className="interest">
+            <FaRobot />
           </li>
-          <li>
-            <img src={Robot} alt="Robótica" />
+          <li className="interest">
+            <GoTelescope />
           </li>
         </ul>
       </div>

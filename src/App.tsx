@@ -9,18 +9,24 @@ import Footer from "./app/Footer";
 
 import "./styles/BaseStyle.css";
 import useScreen from "./utils/useScreen";
+import SideNavigation from "./components/SideNavigation";
 
 export default function App() {
   const screen = useScreen();
 
   return (
-    <>
-      <LandingPage screen={screen} />
-      <Skills />
-      <Projects />
-      <Resume />
-      <Contact />
-      <Footer />
-    </>
+    <div id="screen">
+      <aside>
+        <SideNavigation />
+      </aside>
+      <div id="screen-content">
+        <LandingPage screen={screen} />
+        <Skills />
+        <Projects />
+        <Resume />
+        <Contact />
+        <Footer />
+      </div>
+    </div>
   );
 }

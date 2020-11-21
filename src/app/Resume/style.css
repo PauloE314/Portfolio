@@ -33,26 +33,6 @@
   margin-top: 1.5rem;
 }
 
-/* Interest list */
-#resume .main ul {
-  display: flex;
-  margin-top: 5rem;
-  justify-content: space-between;
-}
-#resume .main ul li {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  width: 7rem;
-  height: 7rem;
-  border-radius: 50%;
-  background-color: #1f1f23;
-}
-#resume .main ul li img {
-  width: 4rem;
-  height: 4rem;
-}
-
 /* Medium */
 @media (max-width: 1100px) {
   #resume {
@@ -123,11 +103,5 @@
   #resume .main .title {
     text-align: center;
     margin-top: 1rem;
-  }
-
-  /* List */
-  #resume .main ul li {
-    width: 8rem;
-    height: 8rem;
   }
 }

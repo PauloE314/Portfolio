@@ -24,17 +24,29 @@ export default function Contact() {
           </p>
           <ul id="contact-list">
             <li className="neon">
-              <a href="https://www.linkedin.com/in/paulo-louren%C3%A7o-178580197/">
+              <a
+                href="https://www.linkedin.com/in/paulo-louren%C3%A7o-178580197/"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
                 <AiFillLinkedin />
               </a>
             </li>
             <li className="neon">
-              <a href="https://github.com/PauloE314">
+              <a
+                href="https://github.com/PauloE314"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
                 <AiFillGithub />
               </a>
             </li>
             <li className="neon">
-              <a href="mailto:pauloeduardodelima155@gmail.com">
+              <a
+                href="mailto:pauloeduardodelima155@gmail.com"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
                 <AiOutlineMail />
               </a>
             </li>

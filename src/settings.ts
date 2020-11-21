@@ -1,4 +1,4 @@
-import Icon from "./assets/Frontend.svg";
+import Icon from "./assets/Skills/Frontend.svg";
 
 export const skills = [
   {
