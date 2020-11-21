@@ -114,10 +114,12 @@
   #landing {
     padding: 2.5rem;
   }
+
   /* Main content mobile */
   #landing #main-content {
     top: 0rem;
   }
+
   /* Header mobile */
   #landing header {
     padding: 1rem 0rem;

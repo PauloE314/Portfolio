@@ -7,15 +7,38 @@ import FullCat from "../../assets/Resume/Full cat.svg";
 import MobileCat from "../../assets/Landing/Landing icon (mobile).svg";
 import Game from "../../assets/Resume/Game.svg";
 import X from "../../assets/Resume/X.svg";
+import ParallaxImage from "../../components/ParallaxImage";
 
-export default function Resume() {
+interface IProps {
+  screen: {
+    width: number;
+    height: number;
+  };
+}
+
+export default function Resume({ screen }: IProps) {
+  function handleGameParallax(diff: number, image: HTMLImageElement) {
+    const change = 0.03 * diff;
+
+    image.style.right = -15 + change + "rem";
+    image.style.transform = `rotate(${45 - change * 2}deg)`;
+  }
+
+  function handleXParallax(diff: number, image: HTMLImageElement) {
+    const change = 0.02 * diff;
+
+    image.style.left = -10 + change * 0.4 + "rem";
+  }
+
   return (
     <section id="resume" className="page">
-      <img src={Game} alt="" id="game" className="bg-image" />
+      <ParallaxImage id="game" handleScroll={handleGameParallax} image={Game} />
+      {/* <img src={Game} alt="" id="game" className="bg-image" /> */}
       <div id="cat-container">
         <img id="small-cat" src={MobileCat} alt="" />
         <img id="large-cat" src={FullCat} alt="" />
-        <img id="X" src={X} alt="" />
+        {/* <img id="X" src={X} alt="" /> */}
+        <ParallaxImage id="X" handleScroll={handleXParallax} image={X} />
       </div>
       <div className="main">
         <h2 className="title">Quem sou eu? </h2>

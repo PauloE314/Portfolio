@@ -7,12 +7,31 @@ import Notebook from "../../assets/Contact/Notebook.svg";
 import Xicara from "../../assets/Contact/Xícara.svg";
 import PI from "../../assets/Contact/PI.svg";
 import R from "../../assets/Contact/R.svg";
+import ParallaxImage from "../../components/ParallaxImage";
 
-export default function Contact() {
+interface IProps {
+  screen: {
+    width: number;
+    height: number;
+  };
+}
+
+export default function Contact({ screen }: IProps) {
+  function handlePIScroll(diff: number, image: HTMLImageElement) {
+    const initial = screen.width < 700 ? 8 : 5;
+    image.style.top = initial - diff * 0.015 + "rem";
+  }
+
+  function handleRScroll(diff: number, image: HTMLImageElement) {
+    image.style.bottom = 3 - diff * 0.03 + "rem";
+  }
+
   return (
     <section id="contact" className="page">
-      <img id="pi" src={PI} className="bg-image" alt="" />
-      <img id="r" src={R} className="bg-image" alt="" />
+      <ParallaxImage id="pi" image={PI} handleScroll={handlePIScroll} />
+      <ParallaxImage id="r" image={R} handleScroll={handleRScroll} />
+      {/* <img id="pi" src={PI} className="bg-image" alt="" />
+      <img id="r" src={R} className="bg-image" alt="" /> */}
       <h2 className="title">Entre em contato comigo :D</h2>
       <div className="main">
         <img id="notebook" src={Notebook} alt="" />

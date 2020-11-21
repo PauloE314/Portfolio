@@ -12,7 +12,6 @@
   position: relative;
 }
 #skills #carousel-container #binary {
-  position: absolute;
   top: 2rem;
   right: -10rem;
 }

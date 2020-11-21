@@ -2,6 +2,7 @@
 #resume #game {
   top: -6rem;
   right: 8rem;
+  transform: rotate(45deg);
   width: 18rem;
 }
 
@@ -72,6 +73,7 @@
   #resume #game {
     top: 3rem;
     right: -5rem;
+    transform: rotate(20deg);
     width: 12rem;
   }
 

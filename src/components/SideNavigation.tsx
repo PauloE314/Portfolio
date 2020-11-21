@@ -1,15 +1,16 @@
 import React, { useEffect, useRef, useState } from "react";
 
 import { BsCircleFill } from "react-icons/bs";
+import useScroll from "../utils/useScroll";
 import "./SideNavigationStyle.css";
 
 export default function SideNavigation() {
   const listRef = useRef<HTMLUListElement>(null);
+  const scroll = useScroll();
   const [currentSection, setCurrentSection] = useState(0);
-  const [controlList, setControlList] = useState<React.ReactNode[]>();
   const [sections, setSections] = useState<(HTMLElement | null)[]>([]);
 
-  function handleScroll() {
+  useEffect(() => {
     const list = listRef.current;
     const elements: { el: HTMLElement; id: number }[] = [];
     const top = window.scrollY;
@@ -20,6 +21,7 @@ export default function SideNavigation() {
       if (top < window.innerHeight) {
         list.style.opacity = "0";
         list.style.left = "-10rem";
+        console.log("Landing");
         return;
       }
       list.style.opacity = "1";
@@ -42,7 +44,7 @@ export default function SideNavigation() {
         setCurrentSection(elements[0].id);
       }
     }
-  }
+  }, [scroll.y]);
 
   useEffect(() => {
     setSections([
@@ -54,29 +56,29 @@ export default function SideNavigation() {
   }, []);
 
   useEffect(() => {
-    setControlList(() =>
-      sections.map((section, index) => (
-        <li key={index} id={"#" + section?.id || "landing"}>
+    for (let i = 0; i < sections.length; i++) {
+      const link = document.getElementById("nav-link-" + i);
+      if (i <= currentSection) {
+        link?.classList.add("active");
+      } else {
+        link?.classList.remove("active");
+      }
+    }
+  }, [currentSection]);
+
+  return (
+    <ul id="side-navigation" ref={listRef}>
+      {sections.map((section, index) => (
+        <li key={index}>
           <a
+            id={"nav-link-" + index}
             href={"#" + section?.id || "landing"}
             className={currentSection >= index ? "active" : ""}
           >
             <BsCircleFill />
           </a>
         </li>
-      ))
-    );
-  }, [currentSection]);
-
-  useEffect(() => {
-    window.addEventListener("scroll", handleScroll);
-    handleScroll();
-    return () => window.removeEventListener("scroll", handleScroll);
-  }, []);
-
-  return (
-    <ul id="side-navigation" ref={listRef}>
-      {controlList}
+      ))}
     </ul>
   );
 }

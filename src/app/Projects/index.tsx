@@ -5,6 +5,7 @@ import "./style.css";
 import Idea from "../../assets/Projects/Ideia.svg";
 import ProjectCard from "./ProjectCard";
 import ProjectModal from "./ProjectModal";
+import ParallaxImage from "../../components/ParallaxImage";
 
 interface IProjectModalData {
   name: string;
@@ -12,7 +13,11 @@ interface IProjectModalData {
   production?: string;
 }
 
-export default function Projects() {
+interface IProps {
+  screen: { width: number; height: number };
+}
+
+export default function Projects({ screen }: IProps) {
   const [showModal, setShowModal] = useState(false);
   const [modalData, setModalData] = useState<IProjectModalData | null>(null);
 
@@ -37,6 +42,18 @@ export default function Projects() {
     }
   }
 
+  function handleParallax(diff: number, image: HTMLImageElement) {
+    let change = 8 - diff * 0.015;
+
+    if (screen.width < 700) {
+      change -= 3;
+    }
+
+    image.style.top = change + "rem";
+    image.style.left = change + "rem";
+    image.style.transform = `rotate(${change * 2}deg)`;
+  }
+
   return (
     <>
       {showModal && modalData && (
@@ -48,7 +65,8 @@ export default function Projects() {
         />
       )}
       <section id="projects" className="page">
-        <img id="idea" src={Idea} alt="" className="bg-image" />
+        <ParallaxImage id="idea" image={Idea} handleScroll={handleParallax} />
+        {/* <img id="idea" src={Idea} alt="" className="bg-image" /> */}
         <h2 className="title">Principais projetos</h2>
         <div className="main">
           <p className="text">

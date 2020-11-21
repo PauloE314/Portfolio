@@ -22,9 +22,9 @@ export default function App() {
       <div id="screen-content">
         <LandingPage screen={screen} />
         <Skills />
-        <Projects />
-        <Resume />
-        <Contact />
+        <Projects screen={screen} />
+        <Resume screen={screen} />
+        <Contact screen={screen} />
         <Footer />
       </div>
     </div>

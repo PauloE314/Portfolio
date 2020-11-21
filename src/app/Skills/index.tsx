@@ -1,21 +1,30 @@
 import React from "react";
 import { FaGamepad } from "react-icons/fa";
 import { GoBrowser, GoGear } from "react-icons/go";
+import { skills } from "../../settings";
+import "./style.css";
 
+import ParallaxImage from "../../components/ParallaxImage";
 import Carousel from "./Carousel";
 
 import BinaryImage from "../../assets/Skills/Binary.svg";
 
-import "./style.css";
-import { skills } from "../../settings";
-
 export default function Skills() {
+  function handleBinaryScroll(diff: number, image: HTMLImageElement) {
+    image.style.right = Math.max(-5 - 0.01 * diff, -12) + "rem";
+  }
+
   return (
     <section id="skills" className="page">
       <h2 className="title">Habilidades</h2>
       <div className="main">
         <div id="carousel-container">
-          <img id="binary" src={BinaryImage} alt="" />
+          <ParallaxImage
+            id="binary"
+            image={BinaryImage}
+            handleScroll={handleBinaryScroll}
+          />
+
           <Carousel list={skills} />
         </div>
 
