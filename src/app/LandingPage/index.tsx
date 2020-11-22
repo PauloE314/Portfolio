@@ -31,12 +31,15 @@ export default function LandingPage({ screen }: IProps) {
 
   useEffect(handleResize, [screen.width]);
 
-  async function writeName(cb: (value: any) => any, name: string) {
+  async function writeName(
+    cb: (value: any) => any,
+    name: string,
+    maxTime = 200
+  ) {
     cb("_");
 
     for (const letter of name) {
-      const nextTime = Math.random() * 200 + 50;
-      await delay(nextTime);
+      await delay(maxTime);
       cb((current: any) => current.slice(0, -1) + letter + "_");
     }
     cb((current: any) => current.slice(0, -1));
@@ -50,13 +53,15 @@ export default function LandingPage({ screen }: IProps) {
         setNameAnimating(true);
         setFirstName("");
         setSecondName("");
+        setDescription("");
+
         await writeName(setFirstName, "Paulo");
         await writeName(setSecondName, "< Eduardo >");
       }
       // Description animation
       setDescription("");
       setNameAnimating(false);
-      await writeName(setDescription, "Desenvolvedor de softwares");
+      await writeName(setDescription, "Desenvolvedor de softwares", 50);
     })();
   }, []);
 

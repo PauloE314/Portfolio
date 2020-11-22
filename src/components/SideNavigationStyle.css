@@ -13,10 +13,11 @@
   color: rgba(255, 255, 255, 0.3);
 }
 #side-navigation li a svg {
-  transition: box-shadow 0.5s;
+  transition: box-shadow 0.5s, color 0.5s;
 }
 
-#side-navigation li a.active svg {
+#side-navigation li a.active svg,
+#side-navigation li a:hover svg {
   color: white;
   box-shadow: 0 0 1rem rgba(255, 255, 255, 0.9),
     inset 0 0 1rem rgba(255, 255, 255, 0.4);

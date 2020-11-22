@@ -90,6 +90,7 @@
   font-size: 0.8rem;
 }
 #skills .carrossel .content .data-container ul .line {
+  position: relative;
   display: flex;
   align-items: center;
 }
@@ -100,6 +101,8 @@
 }
 #skills .carrossel .content .data-container ul .line .grow {
   height: 4px;
+  position: absolute;
+
   transition: width 1s;
 }
 #skills .carrossel .content .data-container ul .line .ball {

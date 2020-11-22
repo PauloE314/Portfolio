@@ -117,7 +117,7 @@ function Line({ color, label, count }: ILineProps) {
       <div className="line">
         <hr
           className="grow"
-          style={{ backgroundColor: color, width: count + "%" }}
+          style={{ backgroundColor: color, width: `calc(${count}% - 0.8rem)` }}
         />
         <hr className="bg-line" />
         <BsCircleFill className="ball" />

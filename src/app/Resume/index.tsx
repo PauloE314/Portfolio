@@ -45,23 +45,22 @@ export default function Resume({ screen }: IProps) {
         <div className="text-container">
           <p className="text">
             Olá a todos, meu nome é <strong>Paulo Eduardo</strong>, sou um
-            estudante <strong>freelancer</strong>
-            apaixonado por programação e praticamente todas as áreas de
-            desenvolvimento tecnológico.
+            estudante <strong>freelancer</strong> apaixonado por programação e
+            por praticamente todas as áreas de desenvolvimento tecnológico.
           </p>
           <p className="text">
             Atualmente estou concluindo o Ensino Médio integrado ao técnico em
             eletrônica, então possuo experiência com sistemas de{" "}
             <strong>hardware</strong> e suporte nessa área de mais baixo nível.
-            Pela minha formação, também possuo interesse nas áreas de{" "}
+            Pela minha formação, também tenho interesse nas áreas de{" "}
             <strong>IOT</strong> (Internet Of Things) e{" "}
             <strong>robótica</strong>.
           </p>
           <p className="text">
-            Sempre gostei muito da área de ciências exatas, tendo inclusive
-            obtido medalha na <strong>OBMEP</strong>, além das áreas de ciências
-            da natureza e astronomia (também obtive medalha na{" "}
-            <strong>OBA</strong>).
+            Sempre gostei muito de ciências exatas, tendo inclusive obtido
+            medalha na <strong>OBMEP</strong>, além de ciências da natureza e
+            astronomia (também obtive medalha na <strong>OBA</strong>
+            ).
           </p>
           <p className="text">
             Atualmente estou me dedicando ao desenvolvimento de software. Possuo

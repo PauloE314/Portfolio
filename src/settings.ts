@@ -1,6 +1,17 @@
 import Icon from "./assets/Skills/Frontend.svg";
 
-export const skills = [
+interface ISkill {
+  icon: string;
+  name: string;
+  tag: string;
+  itens: {
+    label: string;
+    knowledge: number;
+    color: string;
+  }[];
+}
+
+export const skills: ISkill[] = [
   {
     icon: Icon,
     name: "HTML",
@@ -25,7 +36,7 @@ export const skills = [
       },
       {
         label: "CSS",
-        knowledge: 50,
+        knowledge: 99.7,
         color: "blue",
       },
       {
