@@ -31,17 +31,17 @@ export const skills: ISkill[] = [
     itens: [
       {
         label: "HTML",
-        knowledge: 50,
+        knowledge: 70,
         color: "#F16529",
       },
       {
         label: "CSS",
-        knowledge: 100,
+        knowledge: 65,
         color: "#2062AF",
       },
       {
         label: "JS",
-        knowledge: 50,
+        knowledge: 80,
         color: "#E5A321",
       },
     ],
@@ -53,7 +53,7 @@ export const skills: ISkill[] = [
     itens: [
       {
         label: "React.js",
-        knowledge: 50,
+        knowledge: 80,
         color: "#61DBFB",
       },
       {
@@ -70,12 +70,12 @@ export const skills: ISkill[] = [
     itens: [
       {
         label: "Node.js",
-        knowledge: 50,
+        knowledge: 65,
         color: "#68A063",
       },
       {
         label: "Express.js",
-        knowledge: 50,
+        knowledge: 85,
         color: "#ffffff",
       },
     ],
@@ -87,12 +87,12 @@ export const skills: ISkill[] = [
     itens: [
       {
         label: "Python",
-        knowledge: 50,
+        knowledge: 60,
         color: "#FFD43B",
       },
       {
         label: "Django",
-        knowledge: 50,
+        knowledge: 70,
         color: "#092E20",
       },
     ],
@@ -104,12 +104,12 @@ export const skills: ISkill[] = [
     itens: [
       {
         label: "Arduino",
-        knowledge: 50,
+        knowledge: 70,
         color: "#00979C",
       },
       {
         label: "Eletrônica",
-        knowledge: 50,
+        knowledge: 60,
         color: "#E64C3C",
       },
     ],

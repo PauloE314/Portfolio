@@ -52,7 +52,7 @@ export default function Carrossel({ list }: IProps) {
     const interval = setTimeout(() => {
       const nextIndex = currentIndex + 1 === list.length ? 0 : currentIndex + 1;
       handleNextSlide(nextIndex);
-    }, 5000);
+    }, 7000);
     return () => clearInterval(interval);
   }, [currentIndex, list.length]);
 
