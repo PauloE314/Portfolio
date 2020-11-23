@@ -25,9 +25,9 @@ export default function Projects({ screen }: IProps) {
     name: string,
     github: string,
     production?: string
-  ) {
-    setShowModal(true);
-    setModalData({ name, github, production });
+    ) {
+      setShowModal(true);
+      setModalData({ name, github, production });
   }
 
   function handleMobileDescativeClick() {
