@@ -1,4 +1,4 @@
-import React, { FunctionComponent, useState } from "react";
+import React, { FunctionComponent, useEffect, useRef, useState } from "react";
 import { AiOutlineMenu } from "react-icons/ai";
 import { AiOutlineClose } from "react-icons/ai";
 
@@ -12,19 +12,30 @@ const Header: FunctionComponent<IProps> = ({ isMobile, children }) => {
   const [showNavbar, setShowNavbar] = useState(false);
 
   function enableHeader() {
-    setShowNavbar(true);
-    document.body.style.overflowY = "hidden";
+      setShowNavbar(true);
+  }
+
+  function changeStyle(show: boolean) {
+    const bg = document.getElementById('nav-background');
+    const collapseNav = document.getElementById('collapse-header');
+
+    if (collapseNav && bg) {
+      collapseNav.style.top = show ? "1rem" : "-50rem";
+      bg.style.opacity = show ? "1" : "0";
+    }
   }
 
   function disableHeader() {
-    const bg = document.getElementById("nav-background");
-    if (bg) bg.style.opacity = "0";
+    changeStyle(false);
 
     setTimeout(() => {
       setShowNavbar(false);
-      document.body.style.overflowY = "auto";
     }, 500);
   }
+
+  useEffect(() => {
+    changeStyle(true);
+  }, [showNavbar])
 
   function handleScreenClick(e: React.MouseEvent) {
     if (e.target === document.getElementById("nav-background")) {
@@ -34,7 +45,7 @@ const Header: FunctionComponent<IProps> = ({ isMobile, children }) => {
 
   return (
     <header>
-      <img src={Logo} alt="Logo" />
+      <img id="logo" src={Logo} alt="Logo" />
 
       {isMobile ? (
         <>
@@ -50,9 +61,13 @@ const Header: FunctionComponent<IProps> = ({ isMobile, children }) => {
               onClick={handleScreenClick}
             >
               <div id="collapse-header">
-                <button onClick={disableHeader}>
-                  <AiOutlineClose />
-                </button>
+                <div id="nav-head">
+                  <img id="logo" src={Logo} alt="Logo" />
+
+                  <button onClick={disableHeader}>
+                    <AiOutlineClose />
+                  </button>
+                </div>
                 {children}
               </div>
             </div>
