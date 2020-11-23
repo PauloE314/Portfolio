@@ -5,12 +5,25 @@
   transition: opacity 0.5s, left 0.5s;
 }
 #side-navigation li {
-  margin: 1.9rem 1rem;
+  margin: 0 1rem 0 1rem;
   transition: color 0.5s;
   font-size: 0.8rem;
 }
+#side-navigation li:not(:last-of-type)::after {
+  content: "";
+  display: block;
+  border: 1px solid rgb(255, 255, 255, 0.15);
+  position: relative;
+  margin: 0;
+  height: 2rem;
+  width: 0;
+  top: -0.2rem;
+  margin-bottom: -0.2rem;
+  right: -0.3rem;
+}
 #side-navigation li a {
-  color: rgba(255, 255, 255, 0.3);
+  color: rgb(92, 92, 92);
+  z-index: 2;
 }
 #side-navigation li a svg {
   transition: box-shadow 0.5s, color 0.5s;

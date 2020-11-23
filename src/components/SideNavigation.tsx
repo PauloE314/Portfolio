@@ -21,7 +21,6 @@ export default function SideNavigation() {
       if (top < window.innerHeight) {
         list.style.opacity = "0";
         list.style.left = "-10rem";
-        console.log("Landing");
         return;
       }
       list.style.opacity = "1";

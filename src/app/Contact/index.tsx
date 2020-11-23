@@ -18,7 +18,7 @@ interface IProps {
 
 export default function Contact({ screen }: IProps) {
   function handlePIScroll(diff: number, image: HTMLImageElement) {
-    const initial = screen.width < 700 ? 8 : 5;
+    const initial = screen.width < 700 ? 8 : 10;
     image.style.top = initial - diff * 0.015 + "rem";
   }
 

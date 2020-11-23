@@ -42,17 +42,25 @@
 #skills .carrossel .content-container .content.active {
   z-index: 2;
 }
-#skills .carrossel .identify-container {
+#skills .carrossel .content .identify-container {
   display: flex;
   justify-content: center;
   align-items: center;
   flex-direction: column;
   width: auto;
 }
-#skills .carrossel img {
+#skills .carrossel .content .identify-container img {
   width: 10rem;
+  filter: grayscale(100%);
+  opacity: 0;
+  transition: filter 0.8s linear, opacity 0.5s linear;
+  transition-delay: 1.4s, 0.8s;
 }
-#skills .carrossel .label {
+#skills .carrossel .content.active .identify-container img {
+  filter: grayscale(0%);
+  opacity: 1;
+}
+#skills .carrossel .content .identify-container .label {
   display: block;
   margin-top: 2rem;
   text-align: center;
@@ -72,7 +80,8 @@
   margin-left: 3rem;
 }
 #skills .carrossel .content .data-container .tag {
-  background-color: rgba(196, 196, 196, 0.25);
+  background-color: rgba(126, 126, 192, 0.25);
+
   align-self: flex-end;
   padding: 0.5rem 1.8rem;
   font-size: 0.9rem;
@@ -87,7 +96,9 @@
 }
 #skills .carrossel .content .data-container ul span {
   color: #cdcdcd;
+  font-family: Comfortaa;
   font-size: 0.8rem;
+  font-weight: 700;
 }
 #skills .carrossel .content .data-container ul .line {
   position: relative;
@@ -101,12 +112,18 @@
 }
 #skills .carrossel .content .data-container ul .line .grow {
   height: 4px;
-  position: absolute;
-
-  transition: width 1s;
+  width: 0;
+  transition-property: width;
+  transition-duration: 1s;
+  transition-delay: 0.5s;
+}
+#skills .carrossel .content.active .data-container ul .line .grow {
+  width: 100%;
 }
 #skills .carrossel .content .data-container ul .line .ball {
   font-size: 0.9rem;
+  z-index: 2;
+  color: rgb(163, 163, 163);
 }
 #skills .carrossel .control {
   display: flex;

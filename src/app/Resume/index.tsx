@@ -74,12 +74,15 @@ export default function Resume({ screen }: IProps) {
         <ul className="interest-list">
           <li className="interest">
             <FaCalculator />
+            <span>Exatas</span>
           </li>
           <li className="interest">
             <FaRobot />
+            <span>Robótica</span>
           </li>
           <li className="interest">
             <GoTelescope />
+            <span>Astronomia</span>
           </li>
         </ul>
       </div>

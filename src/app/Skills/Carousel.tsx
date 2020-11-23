@@ -29,14 +29,19 @@ export default function Carrossel({ list }: IProps) {
   // Handles with next slide solicitation
   function handleNextSlide(index: number) {
     const container = containerRef.current;
+    const currentSlide = document.getElementById(`${currentIndex}-slide`);
     const nextSlide = document.getElementById(`${index}-slide`);
 
-    if (container && nextSlide) {
+    if (container && nextSlide && currentSlide) {
       const relativeNextX =
         nextSlide.getBoundingClientRect().x -
         container.getBoundingClientRect().x;
 
       container.scrollLeft += relativeNextX;
+
+      // Sets styles
+      currentSlide.classList.remove("active");
+      nextSlide.classList.add("active");
 
       setCurrentIndex(index);
     }
@@ -111,14 +116,25 @@ export default function Carrossel({ list }: IProps) {
 }
 
 function Line({ color, label, count }: ILineProps) {
+  const growLineRef = useRef<HTMLHRElement>(null);
+
   return (
     <li>
       <span>{label}</span>
       <div className="line">
-        <hr
-          className="grow"
-          style={{ backgroundColor: color, width: `calc(${count}% - 0.8rem)` }}
-        />
+        <div
+          className="grow-container"
+          style={{ width: `calc(${count}% - 0.9rem)`, position: "absolute" }}
+        >
+          <hr
+            ref={growLineRef}
+            className="grow"
+            style={{
+              backgroundColor: color,
+              transitionDuration: count > 50 ? "1.7s" : "1s",
+            }}
+          />
+        </div>
         <hr className="bg-line" />
         <BsCircleFill className="ball" />
       </div>
