@@ -31,18 +31,21 @@ export default function LandingPage({ screen }: IProps) {
 
   useEffect(handleResize, [screen.width]);
 
+  // Writes some name
   async function writeName(
     cb: (value: any) => any,
     name: string,
-    maxTime = 200
+    speed: number
   ) {
     cb("_");
 
-    for (const letter of name) {
-      await delay(maxTime);
-      cb((current: any) => current.slice(0, -1) + letter + "_");
+    for (let i = 0; i < name.length; i++) {
+      const letter = name[i];
+      const appendText = i !== name.length - 1 ? letter + "_" : letter;
+
+      await delay(speed);
+      cb((current: any) => current.slice(0, -1) + appendText);
     }
-    cb((current: any) => current.slice(0, -1));
   }
 
   // Start animation
@@ -55,13 +58,13 @@ export default function LandingPage({ screen }: IProps) {
         setSecondName("");
         setDescription("");
 
-        await writeName(setFirstName, "Paulo");
-        await writeName(setSecondName, "< Eduardo >");
+        await writeName(setFirstName, "Paulo", 100);
+        await writeName(setSecondName, "< Eduardo >", 120);
       }
       // Description animation
       setDescription("");
       setNameAnimating(false);
-      await writeName(setDescription, "Desenvolvedor de softwares", 50);
+      await writeName(setDescription, "Desenvolvedor de softwares", 70);
     })();
   }, []);
 

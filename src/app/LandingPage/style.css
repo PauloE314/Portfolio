@@ -53,9 +53,11 @@
 
   white-space: nowrap;
 }
-#landing #main-container h1 span.contrast {
+#landing #main-container h1 #contrast-container span.contrast {
   font-family: Ubuntu;
   color: #2a2d5c;
+  animation-name: TurnColorAnimation;
+  animation-duration: 0.8s;
 }
 #landing #main-container h1 #contrast-container {
   margin-left: 7.5rem;
@@ -71,6 +73,16 @@
 /* Main -> Image */
 #landing #main-container img {
   width: 25rem;
+}
+
+/* Animation name */
+@keyframes TurnColorAnimation {
+  0% {
+    color: white;
+  }
+  100% {
+    color: #2a2d5c;
+  }
 }
 
 /* Nav bar animation */
@@ -127,7 +139,7 @@
   #landing #main-content {
     top: 1rem;
   }
-  
+
   /* Header mobile */
   #landing header {
     padding: 1rem 0rem;
@@ -135,7 +147,7 @@
   #landing header #nav-background {
     z-index: 9999;
   }
-  
+
   #landing header #collapse-button {
     background-color: transparent;
     color: rgba(255, 255, 255, 0.3) !important;

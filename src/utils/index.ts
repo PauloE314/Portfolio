@@ -1,11 +1,16 @@
 export function elementIsVisible(element?: HTMLElement | null) {
   const rect = element?.getBoundingClientRect();
-  const windowHeight = window.innerHeight;
 
   if (!rect) return false;
 
-  if (rect.y < windowHeight && rect.y - rect.height > -windowHeight) {
-    return windowHeight - rect.y;
+  const pageTop = window.screenTop;
+  const pageBottom = pageTop + window.innerHeight;
+  const elementTop = rect.y;
+  const elementHeight = rect.height;
+  const elementBottom = elementTop + elementHeight;
+
+  if (elementTop <= pageBottom && elementBottom >= pageTop) {
+    return elementHeight - elementTop;
   }
   return false;
 }

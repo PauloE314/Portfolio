@@ -30,16 +30,14 @@ export default function Contact({ screen }: IProps) {
     <section id="contact" className="page">
       <ParallaxImage id="pi" image={PI} handleScroll={handlePIScroll} />
       <ParallaxImage id="r" image={R} handleScroll={handleRScroll} />
-      {/* <img id="pi" src={PI} className="bg-image" alt="" />
-      <img id="r" src={R} className="bg-image" alt="" /> */}
       <h2 className="title">Entre em contato comigo :D</h2>
       <div className="main">
         <img id="notebook" src={Notebook} alt="" />
         <div id="contact-container">
           <p className="text">
             Eu fico muito feliz por você ter se interessado no meu pequeno mas
-            duro trabalho de freelancer, talvez podemos virá amigos num futuro
-            proximo :)
+            duro trabalho de freelancer, talvez podemos virar parceiros num
+            futuro proximo :)
           </p>
           <ul id="contact-list">
             <li className="neon">
