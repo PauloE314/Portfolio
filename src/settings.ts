@@ -8,9 +8,10 @@ import Nonny from "./assets/Projects/Nonny.png";
 import Happy from "./assets/Projects/Happy.png";
 import PySnake from "./assets/Projects/Py snake.png";
 import Pong from "./assets/Projects/Pong.png";
-import Tahan from "./assets/Projects/Tahan.png";
 import SeuChef from "./assets/Projects/Seu chef.png";
 import Asteroids from "./assets/Projects/Asteroids.png";
+import DashTime from "./assets/Projects/DashTime.png";
+import Hestia from "./assets/Projects/Hestia.png";
 
 interface ISkill {
   icon: string;
@@ -87,12 +88,12 @@ export const skills: ISkill[] = [
     itens: [
       {
         label: "Python",
-        knowledge: 60,
+        knowledge: 65,
         color: "#FFD43B",
       },
       {
         label: "Django",
-        knowledge: 70,
+        knowledge: 50,
         color: "#092E20",
       },
     ],
@@ -118,22 +119,32 @@ export const skills: ISkill[] = [
 
 export const projects = [
   {
-    name: "Nonny",
-    year: 2020,
-    tag: "Full Stack",
-    image: Nonny,
+    name: "Asteroids",
+    year: 2021,
+    tag: "Frontend",
+    image: Asteroids,
     links: {
-      github: "https://github.com/PauloE314/Nonny",
+      github: "https://github.com/PauloE314/Asteroids",
       production: undefined,
     },
   },
   {
-    name: "Happy",
-    year: 2020,
-    tag: "Full Stack",
-    image: Happy,
+    name: "DashTime",
+    year: 2021,
+    tag: "Frontend",
+    image: DashTime,
     links: {
-      github: "https://github.com/PauloE314/Happy-NLW-3",
+      github: "https://github.com/PauloE314/DashTime",
+      production: undefined,
+    },
+  },
+  {
+    name: "Hestia",
+    year: 2021,
+    tag: "Frontend",
+    image: Hestia,
+    links: {
+      github: "https://github.com/PauloE314/Hestia",
       production: undefined,
     },
   },
@@ -158,12 +169,12 @@ export const projects = [
     },
   },
   {
-    name: "Tahan",
+    name: "Happy",
     year: 2020,
-    tag: "Backend",
-    image: Tahan,
+    tag: "Full Stack",
+    image: Happy,
     links: {
-      github: "https://github.com/PauloE314/Tahan-Backend",
+      github: "https://github.com/PauloE314/Happy-NLW-3",
       production: undefined,
     },
   },
@@ -178,12 +189,12 @@ export const projects = [
     },
   },
   {
-    name: "Asteroids online",
+    name: "Nonny",
     year: 2020,
     tag: "Full Stack",
-    image: Asteroids,
+    image: Nonny,
     links: {
-      github: "https://github.com/PauloE314/Seu-Chef-Backend",
+      github: "https://github.com/PauloE314/Nonny",
       production: undefined,
     },
   },

@@ -14,7 +14,3 @@ export function elementIsVisible(element?: HTMLElement | null) {
   }
   return false;
 }
-
-export async function delay(n: number) {
-  return new Promise((resolve, reject) => setTimeout(resolve, n));
-}

@@ -35,9 +35,8 @@ export default function Contact({ screen }: IProps) {
         <img id="notebook" src={Notebook} alt="" />
         <div id="contact-container">
           <p className="text">
-            Eu fico muito feliz por você ter se interessado no meu pequeno mas
-            duro trabalho de freelancer, talvez podemos virar parceiros num
-            futuro proximo :)
+            Eu fico muito feliz por você ter se interessado trabalho como
+            freelancer, talvez podemos virar parceiros num futuro proximo :)
           </p>
           <ul id="contact-list">
             <li className="neon">
