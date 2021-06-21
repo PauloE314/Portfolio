@@ -41,7 +41,7 @@ export default function Contact({ screen }: IProps) {
           <ul id="contact-list">
             <li className="neon">
               <a
-                href="https://www.linkedin.com/in/paulo-louren%C3%A7o-178580197/"
+                href="https://www.linkedin.com/in/pedll/"
                 target="_blank"
                 rel="noopener noreferrer"
               >
