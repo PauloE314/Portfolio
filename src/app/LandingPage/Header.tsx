@@ -1,4 +1,4 @@
-import React, { FunctionComponent, useEffect, useRef, useState } from "react";
+import React, { FunctionComponent, useEffect, useState } from "react";
 import { AiOutlineMenu } from "react-icons/ai";
 import { AiOutlineClose } from "react-icons/ai";
 
@@ -12,12 +12,12 @@ const Header: FunctionComponent<IProps> = ({ isMobile, children }) => {
   const [showNavbar, setShowNavbar] = useState(false);
 
   function enableHeader() {
-      setShowNavbar(true);
+    setShowNavbar(true);
   }
 
   function changeStyle(show: boolean) {
-    const bg = document.getElementById('nav-background');
-    const collapseNav = document.getElementById('collapse-header');
+    const bg = document.getElementById("nav-background");
+    const collapseNav = document.getElementById("collapse-header");
 
     if (collapseNav && bg) {
       collapseNav.style.top = show ? "1rem" : "-50rem";
@@ -35,7 +35,7 @@ const Header: FunctionComponent<IProps> = ({ isMobile, children }) => {
 
   useEffect(() => {
     changeStyle(true);
-  }, [showNavbar])
+  }, [showNavbar]);
 
   function handleScreenClick(e: React.MouseEvent) {
     if (e.target === document.getElementById("nav-background")) {

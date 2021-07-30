@@ -32,7 +32,7 @@
 #projects #project-list .card .card-data {
   display: flex;
   flex-direction: column;
-  background-color: #1f1f23;
+  background-color: var(--secondary-color);
   border-radius: 0.3rem;
 }
 

@@ -3,12 +3,13 @@ import ReactVue from "./assets/Skills/React-vue.svg";
 import NodeExpress from "./assets/Skills/Node-express.svg";
 import PythonDjango from "./assets/Skills/Python-django.svg";
 import ArduinoEletronics from "./assets/Skills/Arduino-eletronics.svg";
+import Database from "./assets/Skills/Database.svg";
 
 import Nonny from "./assets/Projects/Nonny.png";
 import Happy from "./assets/Projects/Happy.png";
 import PySnake from "./assets/Projects/Py snake.png";
 import Pong from "./assets/Projects/Pong.png";
-import SeuChef from "./assets/Projects/Seu chef.png";
+// import SeuChef from "./assets/Projects/Seu chef.png";
 import Asteroids from "./assets/Projects/Asteroids.png";
 import DashTime from "./assets/Projects/DashTime.png";
 import Hestia from "./assets/Projects/Hestia.png";
@@ -71,12 +72,12 @@ export const skills: ISkill[] = [
     itens: [
       {
         label: "Node.js",
-        knowledge: 65,
+        knowledge: 85,
         color: "#68A063",
       },
       {
         label: "Express.js",
-        knowledge: 85,
+        knowledge: 70,
         color: "#ffffff",
       },
     ],
@@ -95,6 +96,18 @@ export const skills: ISkill[] = [
         label: "Django",
         knowledge: 50,
         color: "#092E20",
+      },
+    ],
+  },
+  {
+    icon: Database,
+    name: "SQL",
+    tag: "Backend",
+    itens: [
+      {
+        label: "SQL",
+        knowledge: 50,
+        color: "#95b8e6",
       },
     ],
   },
@@ -178,16 +191,16 @@ export const projects = [
       production: undefined,
     },
   },
-  {
-    name: "Seu chef",
-    year: 2020,
-    tag: "Backend",
-    image: SeuChef,
-    links: {
-      github: "https://github.com/PauloE314/Seu-Chef-Backend",
-      production: undefined,
-    },
-  },
+  // {
+  //   name: "Seu chef",
+  //   year: 2020,
+  //   tag: "Backend",
+  //   image: SeuChef,
+  //   links: {
+  //     github: "https://github.com/PauloE314/Seu-Chef-Backend",
+  //     production: undefined,
+  //   },
+  // },
   {
     name: "Nonny",
     year: 2020,

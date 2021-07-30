@@ -1,4 +1,3 @@
-import React from "react";
 import { AiOutlineGlobal, AiFillGithub } from "react-icons/ai";
 
 interface IProps {

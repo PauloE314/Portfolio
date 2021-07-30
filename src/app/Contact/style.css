@@ -37,7 +37,7 @@
 /* Contact data */
 #contact .main #contact-container {
   position: relative;
-  background-color: #1f1f23;
+  background-color: var(--secondary-color);
   padding: 2.5rem 3rem 3rem 2rem;
   border-radius: 0.5rem;
 }
@@ -68,7 +68,7 @@
     background-color 0.3s;
 }
 #contact .main #contact-container ul li a {
-  color: #1f1f23;
+  color: var(--secondary-color);
   transition: color 0.3s;
 }
 #contact .main #contact-container ul li:hover {

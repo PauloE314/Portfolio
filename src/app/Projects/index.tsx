@@ -1,4 +1,4 @@
-import React, { useRef, useState } from "react";
+import { useState } from "react";
 import { projects } from "../../settings";
 
 import "./style.css";
@@ -25,9 +25,9 @@ export default function Projects({ screen }: IProps) {
     name: string,
     github: string,
     production?: string
-    ) {
-      setShowModal(true);
-      setModalData({ name, github, production });
+  ) {
+    setShowModal(true);
+    setModalData({ name, github, production });
   }
 
   function handleMobileDescativeClick() {
@@ -69,12 +69,6 @@ export default function Projects({ screen }: IProps) {
         {/* <img id="idea" src={Idea} alt="" className="bg-image" /> */}
         <h2 className="title">Principais projetos</h2>
         <div className="main">
-          <p className="text">
-            Segue a lista dos principais projetos nos quais atuei ou fui o
-            criador. Serão listados projetos tanto pessoais quanto
-            profissionais.
-          </p>
-
           <ul id="project-list">
             {[...projects].map(({ image, name, tag, year, links }, id) => (
               <ProjectCard

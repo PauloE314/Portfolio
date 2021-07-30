@@ -1,4 +1,3 @@
-import React from "react";
 import { FaGamepad } from "react-icons/fa";
 import { GoBrowser, GoGear } from "react-icons/go";
 import { skills } from "../../settings";
@@ -26,22 +25,6 @@ export default function Skills() {
           />
 
           <Carousel list={skills} />
-        </div>
-
-        <div className="text-container">
-          <p className="text">
-            Possuo alta capacidade de aprendizado, estou sempre buscando coisas
-            novas e novos conhecimentos nas mais diversas áreas. Minhas
-            competências incluem desde programação para jogos a suporte de
-            hardware.
-          </p>
-          <p className="text">
-            Entretanto, vale destacar que as minhas principais competências e
-            habilidades giram em torno da programação WEB, principalmente
-            voltada para o lado backend com tecnologias como{" "}
-            <strong>Django</strong> (Python) e <strong>Express.js</strong>{" "}
-            (JavaScript).
-          </p>
         </div>
 
         <ul className="interest-list">

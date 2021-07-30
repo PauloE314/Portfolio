@@ -1,5 +1,3 @@
-import React from "react";
-
 import LandingPage from "./app/LandingPage";
 import Skills from "./app/Skills";
 import Projects from "./app/Projects";
