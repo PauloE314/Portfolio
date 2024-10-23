@@ -53,7 +53,7 @@ export default function Resume({ screen }: IProps) {
           <p className="text">
             Olá a todos! Meu nome é <strong>Paulo Eduardo</strong>, sou um
             desenvolvedor Fullstack de {age} anos com sólida experiência no
-            desenvolvimento de soluções web. Trabalhei na
+            desenvolvimento de soluções web. Trabalhei na{" "}
             <strong>Codeminer42</strong>, uma grande consultoria de software do
             Brasil, onde fui alocado para colaborar com empresas como Aero e
             Petlove, criando e mantendo sistemas robustos e escaláveis.
@@ -69,7 +69,8 @@ export default function Resume({ screen }: IProps) {
             Se você está buscando um profissional comprometido, que entrega
             soluções eficientes, inovadoras e dentro do prazo, estou pronto para
             colaborar em novos desafios e ajudar seu projeto a alcançar o
-            próximo nível. Vamos transformar sua ideia em realidade!
+            próximo nível.{" "}
+            <strong>Vamos transformar sua ideia em realidade!</strong>
           </p>
         </div>
       </div>
