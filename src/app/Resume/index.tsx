@@ -51,55 +51,27 @@ export default function Resume({ screen }: IProps) {
         <h2 className="title">Quem sou eu? </h2>
         <div className="text-container">
           <p className="text">
-            Olá a todos, meu nome é <strong>Paulo Eduardo</strong>, tenho {age}{" "}
-            anos, trabalho na{" "}
-            <a
-              href="https://www.codeminer42.com/"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              <strong>Codeminer42</strong>
-            </a>{" "}
-            como programador fullstack e sou um estudante apaixonado por
-            tecnologia.
+            Olá a todos! Meu nome é <strong>Paulo Eduardo</strong>, sou um
+            desenvolvedor Fullstack de {age} anos com sólida experiência no
+            desenvolvimento de soluções web. Trabalhei na
+            <strong>Codeminer42</strong>, uma grande consultoria de software do
+            Brasil, onde fui alocado para colaborar com empresas como Aero e
+            Petlove, criando e mantendo sistemas robustos e escaláveis.
           </p>
           <p className="text">
-            Atualmente estou concluindo o Ensino Médio integrado ao técnico em
-            eletrônica, então possuo conhecimento em algumas áreas de{" "}
-            <strong>hardware</strong> e software de baixo nível. Sempre tive
-            muito interesse em ramos como <strong>IOT</strong> e,{" "}
-            <strong>sistemas embarcados</strong> e, principalmente,{" "}
-            <strong>robótica</strong>.
+            Minha expertise abrange tanto o front-end quanto o back-end,
+            trabalhando com tecnologias modernas e frameworks populares. Tenho
+            um olhar atento para a criação de interfaces intuitivas e otimização
+            de performance, além de garantir a qualidade e segurança das
+            aplicações.
           </p>
           <p className="text">
-            Sempre gostei muito de ciências exatas, tendo, inclusive, obtido
-            algumas medalhas na <strong>OBMEP</strong>; mas não me restrinjo
-            apenas à matemática, também sou fã de outras áreas, como física,
-            química e astronomia (também fui premiado na <strong>OBA</strong>
-            ).
-          </p>
-          <p className="text">
-            Atualmente me dedico ao desenvolvimento de software. Meu principal
-            setor de atuação é a programação web <strong>backend</strong> e{" "}
-            <strong>frontend</strong>, mas tenho um pouco de experiência com{" "}
-            <strong>desenvolvimento de jogos</strong> e de{" "}
-            <strong>aplicações desktop</strong>.
+            Se você está buscando um profissional comprometido, que entrega
+            soluções eficientes, inovadoras e dentro do prazo, estou pronto para
+            colaborar em novos desafios e ajudar seu projeto a alcançar o
+            próximo nível. Vamos transformar sua ideia em realidade!
           </p>
         </div>
-        <ul className="interest-list">
-          <li className="interest">
-            <FaCalculator />
-            <span>Exatas</span>
-          </li>
-          <li className="interest">
-            <FaRobot />
-            <span>Robótica</span>
-          </li>
-          <li className="interest">
-            <GoTelescope />
-            <span>Astronomia</span>
-          </li>
-        </ul>
       </div>
     </section>
   );
